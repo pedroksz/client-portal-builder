@@ -7,7 +7,7 @@ const WhatsAppCard = () => {
 
   return (
     <div 
-      className="bg-success-light rounded-2xl p-8 text-center card-shadow animate-fade-in"
+      className="bg-success-light border-2 border-accent rounded-xl p-8 text-center shadow-sm animate-fade-in"
       style={{ animationDelay: "0.1s" }}
     >
       <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center mx-auto mb-4">
