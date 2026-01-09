@@ -1,10 +1,8 @@
 import { MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { company, whatsappLink } from "@/config/company";
 
 const WhatsAppCard = () => {
-  const whatsappNumber = "5511948637288";
-  const whatsappLink = `https://wa.me/${whatsappNumber}`;
-
   return (
     <div 
       className="bg-success-light border-2 border-accent rounded-xl p-8 text-center shadow-sm animate-fade-in"
@@ -18,15 +16,15 @@ const WhatsAppCard = () => {
         Atendimento via WhatsApp
       </h3>
       <p className="text-muted-foreground mb-6">
-        Serviço rápido, prático e seguro das 8h às 20h
+        Serviço rápido, prático e seguro das {company.serviceHours}
       </p>
       
       <a 
-        href={`tel:+5511948637288`}
+        href={`tel:${company.phoneLink}`}
         className="inline-flex items-center gap-2 text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
       >
         <Phone className="w-6 h-6" />
-        (11) 4863-7288
+        {company.phoneFormatted}
       </a>
       
       <p className="text-sm text-muted-foreground mt-2 mb-6">

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
+import { company } from "@/config/company";
 
 const SobreNos = () => {
   return (
@@ -23,8 +24,7 @@ const SobreNos = () => {
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3">Quem Somos</h3>
               <p className="text-muted-foreground">
-                A FAROLDIGITAL GEOTECNOLOGIA LTDA é uma empresa especializada em consultoria em gestão 
-                empresarial, dedicada a auxiliar empresas e profissionais a alcançarem excelência 
+                A {company.name} é uma empresa especializada em {company.activity}, dedicada a auxiliar empresas e profissionais a alcançarem excelência 
                 operacional e financeira.
               </p>
             </div>
@@ -34,7 +34,7 @@ const SobreNos = () => {
                 <Building2 className="w-10 h-10 text-primary mb-3" />
                 <h3 className="font-semibold text-foreground mb-2">Quem Somos</h3>
                 <p className="text-sm text-muted-foreground">
-                  Empresa especializada em consultoria empresarial
+                  Empresa especializada em {company.activity}
                 </p>
               </div>
 
@@ -58,7 +58,7 @@ const SobreNos = () => {
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3">Nossa Missão</h3>
               <p className="text-muted-foreground">
-                Oferecer soluções personalizadas de consultoria empresarial que transformem desafios 
+                Oferecer soluções personalizadas de {company.activity} que transformem desafios 
                 em oportunidades de crescimento sustentável, sempre com foco em resultados práticos 
                 e mensuráveis.
               </p>
@@ -90,10 +90,10 @@ const SobreNos = () => {
 
             <div className="pt-4 border-t border-border text-center">
               <p className="text-sm font-medium text-foreground">
-                FAROLDIGITAL GEOTECNOLOGIA LTDA
+                {company.name}
               </p>
               <p className="text-sm text-muted-foreground">
-                CNPJ: 97.551.525/0001-57
+                CNPJ: {company.cnpj}
               </p>
             </div>
           </CardContent>

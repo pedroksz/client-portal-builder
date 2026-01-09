@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
+import { company } from "@/config/company";
 
 const PoliticaPrivacidade = () => {
   return (
@@ -22,7 +23,7 @@ const PoliticaPrivacidade = () => {
           <CardContent className="prose prose-sm max-w-none text-muted-foreground space-y-4">
             <h3 className="text-foreground font-semibold mt-2">1. Informações Gerais</h3>
             <p>
-              A FAROLDIGITAL GEOTECNOLOGIA LTDA, inscrita no CNPJ 97.551.525/0001-57, está comprometida 
+              A {company.name}, inscrita no CNPJ {company.cnpj}, está comprometida 
               com a proteção dos dados pessoais de seus clientes, em conformidade com a Lei Geral de 
               Proteção de Dados (LGPD - Lei nº 13.709/2018).
             </p>
@@ -39,7 +40,7 @@ const PoliticaPrivacidade = () => {
             <h3 className="text-foreground font-semibold mt-6">3. Finalidade do Tratamento</h3>
             <p>Os dados coletados são utilizados para:</p>
             <ul className="list-disc list-inside space-y-1">
-              <li>Prestação de serviços de consultoria e gestão empresarial</li>
+              <li>Prestação de serviços de {company.activity}</li>
               <li>Processamento de pagamentos e emissão de boletos</li>
               <li>Comunicação com clientes sobre serviços contratados</li>
               <li>Cumprimento de obrigações legais e regulatórias</li>
@@ -93,7 +94,7 @@ const PoliticaPrivacidade = () => {
             <h3 className="text-foreground font-semibold mt-6">10. Contato</h3>
             <p>
               Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato 
-              conosco através do e-mail contato@faroldigital.com.br.
+              conosco através do e-mail {company.email}.
             </p>
 
             <p className="text-sm italic mt-8">Última atualização: Janeiro de 2025</p>
