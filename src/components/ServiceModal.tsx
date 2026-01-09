@@ -1,7 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, LucideIcon } from "lucide-react";
-import { company, whatsappLink } from "@/config/company";
+import { company, openWhatsApp } from "@/config/company";
 
 interface ServiceModalProps {
   isOpen: boolean;
@@ -60,14 +60,12 @@ const ServiceModal = ({ isOpen, onClose, service }: ServiceModalProps) => {
           {/* WhatsApp Button */}
           <div className="mt-6">
             <Button 
-              asChild
-              className="w-full text-white px-8 py-3 text-lg hover:opacity-90"
+              onClick={openWhatsApp}
+              className="w-full text-white px-8 py-3 text-lg hover:opacity-90 cursor-pointer"
               style={{ backgroundColor: 'rgb(16, 185, 129)' }}
             >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Solicitar via WhatsApp
-              </a>
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Solicitar via WhatsApp
             </Button>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { company, whatsappLink } from "@/config/company";
+import { company, openWhatsApp } from "@/config/company";
 
 const WhatsAppCard = () => {
   return (
@@ -32,13 +32,11 @@ const WhatsAppCard = () => {
       </p>
       
       <Button 
-        asChild
-        className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-base rounded-lg"
+        onClick={openWhatsApp}
+        className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-base rounded-lg cursor-pointer"
       >
-        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-          <MessageCircle className="w-5 h-5 mr-2" />
-          SOLICITAR VIA WHATSAPP
-        </a>
+        <MessageCircle className="w-5 h-5 mr-2" />
+        SOLICITAR VIA WHATSAPP
       </Button>
     </div>
   );
