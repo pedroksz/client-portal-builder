@@ -1,7 +1,15 @@
-import { CheckCircle, FileText, CircleDollarSign, Calendar, AlertCircle } from "lucide-react";
+import { CheckCircle, FileText, CircleDollarSign, Calendar, AlertCircle, LucideIcon } from "lucide-react";
 import { useState } from "react";
+import ServiceModal from "./ServiceModal";
 
-const services = [
+interface Service {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  color: string;
+}
+
+const services: Service[] = [
   {
     icon: FileText,
     title: "2ª via de boleto",
@@ -29,52 +37,54 @@ const services = [
 ];
 
 const ServicesCard = () => {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   return (
-    <div 
-      className="bg-card rounded-xl p-6 shadow-sm animate-fade-in"
-      style={{ animationDelay: "0.2s" }}
-    >
-      <div className="flex items-center gap-2 mb-2">
-        <CheckCircle className="w-5 h-5 text-accent" />
-        <h3 className="text-base font-semibold text-primary">
-          Solicitações Disponíveis
-        </h3>
+    <>
+      <div 
+        className="bg-card rounded-xl p-6 shadow-sm animate-fade-in"
+        style={{ animationDelay: "0.2s" }}
+      >
+        <div className="flex items-center gap-2 mb-2">
+          <CheckCircle className="w-5 h-5 text-accent" />
+          <h3 className="text-base font-semibold text-primary">
+            Solicitações Disponíveis
+          </h3>
+        </div>
+        <p className="text-sm text-gray-500 mb-4">
+          Clique no serviço desejado para mais informações
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            
+            return (
+              <button
+                key={index}
+                onClick={() => setSelectedService(service)}
+                className="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-primary/30 hover:bg-gray-50 transition-all text-left"
+              >
+                <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <Icon className={`w-5 h-5 ${service.color}`} />
+                </div>
+                <div className="flex-1">
+                  <span className="text-primary font-semibold">
+                    {service.title}
+                  </span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
       </div>
-      <p className="text-sm text-gray-500 mb-4">
-        Clique no serviço desejado para mais informações
-      </p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-        {services.map((service, index) => {
-          const Icon = service.icon;
-          const isExpanded = expandedIndex === index;
-          
-          return (
-            <button
-              key={index}
-              onClick={() => setExpandedIndex(isExpanded ? null : index)}
-              className="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-primary/30 hover:bg-gray-50 transition-all text-left"
-            >
-              <div className={`w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0`}>
-                <Icon className={`w-5 h-5 ${service.color}`} />
-              </div>
-              <div className="flex-1">
-                <span className="text-primary font-semibold">
-                  {service.title}
-                </span>
-                {isExpanded && (
-                  <p className="text-sm text-gray-500 mt-2 animate-fade-in">
-                    {service.description}
-                  </p>
-                )}
-              </div>
-            </button>
-          );
-        })}
-      </div>
-    </div>
+
+      <ServiceModal 
+        isOpen={!!selectedService}
+        onClose={() => setSelectedService(null)}
+        service={selectedService}
+      />
+    </>
   );
 };
 
