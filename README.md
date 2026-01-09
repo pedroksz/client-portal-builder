@@ -64,6 +64,103 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
 
+### Deploy no Apache2 (Ubuntu)
+
+#### 1. Instale o Apache2
+
+```sh
+sudo apt update
+sudo apt install apache2
+```
+
+#### 2. Gere o build de produção
+
+```sh
+npm run build
+```
+
+Isso criará uma pasta `dist/` com os arquivos estáticos.
+
+#### 3. Copie os arquivos para o Apache
+
+```sh
+sudo cp -r dist/* /var/www/html/
+```
+
+Ou, se preferir criar um diretório específico:
+
+```sh
+sudo mkdir -p /var/www/portal-cliente
+sudo cp -r dist/* /var/www/portal-cliente/
+```
+
+#### 4. Configure o Virtual Host (opcional, para diretório específico)
+
+Crie um arquivo de configuração:
+
+```sh
+sudo nano /etc/apache2/sites-available/portal-cliente.conf
+```
+
+Adicione o conteúdo:
+
+```apache
+<VirtualHost *:80>
+    ServerName seu-dominio.com
+    DocumentRoot /var/www/portal-cliente
+
+    <Directory /var/www/portal-cliente>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/portal-cliente-error.log
+    CustomLog ${APACHE_LOG_DIR}/portal-cliente-access.log combined
+</VirtualHost>
+```
+
+#### 5. Habilite o mod_rewrite (necessário para React Router)
+
+```sh
+sudo a2enmod rewrite
+```
+
+#### 6. Configure o .htaccess para SPA
+
+Crie um arquivo `.htaccess` na pasta do projeto (antes do build) ou diretamente no servidor:
+
+```sh
+sudo nano /var/www/portal-cliente/.htaccess
+```
+
+Adicione:
+
+```apache
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
+```
+
+#### 7. Ative o site e reinicie o Apache
+
+```sh
+sudo a2ensite portal-cliente.conf
+sudo systemctl restart apache2
+```
+
+#### 8. (Opcional) Configure HTTPS com Let's Encrypt
+
+```sh
+sudo apt install certbot python3-certbot-apache
+sudo certbot --apache -d seu-dominio.com
+```
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!
