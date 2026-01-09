@@ -24,6 +24,7 @@ const App = () => (
           <meta name="author" content={seo.author} />
           <meta property="og:title" content={seo.title} />
           <meta property="og:description" content={seo.description} />
+          <meta property="og:type" content="website" />
         </Helmet>
         <Toaster />
         <Sonner />
@@ -33,7 +34,6 @@ const App = () => (
             <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
             <Route path="/termos-uso" element={<TermosUso />} />
             <Route path="/sobre-nos" element={<SobreNos />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
