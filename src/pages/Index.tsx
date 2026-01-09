@@ -1,11 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import AlertBanner from "@/components/AlertBanner";
+import WhatsAppCard from "@/components/WhatsAppCard";
+import ServicesCard from "@/components/ServicesCard";
+import StepsCard from "@/components/StepsCard";
+import BenefitsCard from "@/components/BenefitsCard";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background py-8 px-4">
+      <div className="max-w-3xl mx-auto space-y-6">
+        <AlertBanner />
+        <WhatsAppCard />
+        <ServicesCard />
+        <StepsCard />
+        <BenefitsCard />
+        
+        <footer className="text-center text-sm text-muted-foreground pt-8 pb-4">
+          <p>© {new Date().getFullYear()} Portal do Cliente. Todos os direitos reservados.</p>
+        </footer>
       </div>
     </div>
   );
