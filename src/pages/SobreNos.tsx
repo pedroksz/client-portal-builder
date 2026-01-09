@@ -1,4 +1,4 @@
-import { ArrowLeft, Building2, Users, Target } from "lucide-react";
+import { ArrowLeft, Building2, Target, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,26 +20,21 @@ const SobreNos = () => {
             <CardTitle className="text-2xl text-primary">Sobre Nós</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
-            <p className="text-muted-foreground">
-              O Portal do Cliente é uma plataforma dedicada a oferecer soluções práticas 
-              e eficientes para nossos clientes, facilitando o acesso a serviços e informações 
-              de forma rápida e segura.
-            </p>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-3">Quem Somos</h3>
+              <p className="text-muted-foreground">
+                A FAROLDIGITAL GEOTECNOLOGIA LTDA é uma empresa especializada em consultoria em gestão 
+                empresarial, dedicada a auxiliar empresas e profissionais a alcançarem excelência 
+                operacional e financeira.
+              </p>
+            </div>
 
             <div className="grid gap-4 md:grid-cols-3">
               <div className="flex flex-col items-center text-center p-4 rounded-lg bg-muted/50">
                 <Building2 className="w-10 h-10 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Nossa Empresa</h3>
+                <h3 className="font-semibold text-foreground mb-2">Quem Somos</h3>
                 <p className="text-sm text-muted-foreground">
-                  Comprometidos com a excelência no atendimento ao cliente
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center text-center p-4 rounded-lg bg-muted/50">
-                <Users className="w-10 h-10 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Nossa Equipe</h3>
-                <p className="text-sm text-muted-foreground">
-                  Profissionais qualificados prontos para ajudar você
+                  Empresa especializada em consultoria empresarial
                 </p>
               </div>
 
@@ -47,20 +42,59 @@ const SobreNos = () => {
                 <Target className="w-10 h-10 text-primary mb-3" />
                 <h3 className="font-semibold text-foreground mb-2">Nossa Missão</h3>
                 <p className="text-sm text-muted-foreground">
-                  Facilitar a vida dos nossos clientes com soluções inovadoras
+                  Transformar desafios em oportunidades de crescimento
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center text-center p-4 rounded-lg bg-muted/50">
+                <Heart className="w-10 h-10 text-primary mb-3" />
+                <h3 className="font-semibold text-foreground mb-2">Nossos Valores</h3>
+                <p className="text-sm text-muted-foreground">
+                  Ética, transparência e compromisso
                 </p>
               </div>
             </div>
 
-            <div className="space-y-4 pt-4">
-              <h3 className="font-semibold text-foreground">Nossos Valores</h3>
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-3">Nossa Missão</h3>
+              <p className="text-muted-foreground">
+                Oferecer soluções personalizadas de consultoria empresarial que transformem desafios 
+                em oportunidades de crescimento sustentável, sempre com foco em resultados práticos 
+                e mensuráveis.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-3">Nossos Valores</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                <li>Transparência em todas as nossas ações</li>
-                <li>Compromisso com a satisfação do cliente</li>
-                <li>Inovação constante em nossos serviços</li>
-                <li>Respeito e ética nos relacionamentos</li>
-                <li>Agilidade e eficiência no atendimento</li>
+                <li>Excelência em atendimento e qualidade dos serviços</li>
+                <li>Ética e transparência em todas as relações</li>
+                <li>Compromisso com resultados sustentáveis</li>
+                <li>Inovação e melhoria contínua</li>
+                <li>Respeito e valorização das pessoas</li>
               </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-foreground mb-3">Áreas de Atuação</h3>
+              <p className="text-muted-foreground mb-2">
+                Trabalhamos com diversos segmentos empresariais, oferecendo consultoria especializada em:
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                <li>Planejamento estratégico e gestão empresarial</li>
+                <li>Otimização de processos e controles internos</li>
+                <li>Gestão financeira e análise de desempenho</li>
+                <li>Desenvolvimento organizacional</li>
+              </ul>
+            </div>
+
+            <div className="pt-4 border-t border-border text-center">
+              <p className="text-sm font-medium text-foreground">
+                FAROLDIGITAL GEOTECNOLOGIA LTDA
+              </p>
+              <p className="text-sm text-muted-foreground">
+                CNPJ: 97.551.525/0001-57
+              </p>
             </div>
           </CardContent>
         </Card>
