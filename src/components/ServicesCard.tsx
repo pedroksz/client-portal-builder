@@ -33,20 +33,20 @@ const ServicesCard = () => {
 
   return (
     <div 
-      className="bg-card rounded-2xl p-6 card-shadow animate-fade-in"
+      className="bg-card rounded-xl p-6 shadow-sm animate-fade-in"
       style={{ animationDelay: "0.2s" }}
     >
-      <div className="flex items-center gap-3 mb-2">
+      <div className="flex items-center gap-2 mb-2">
         <CheckCircle className="w-5 h-5 text-accent" />
-        <h3 className="text-lg font-semibold text-primary">
+        <h3 className="text-base font-semibold text-primary">
           Solicitações Disponíveis
         </h3>
       </div>
-      <p className="text-sm text-muted-foreground mb-4">
+      <p className="text-sm text-gray-500 mb-4">
         Clique no serviço desejado para mais informações
       </p>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {services.map((service, index) => {
           const Icon = service.icon;
           const isExpanded = expandedIndex === index;
@@ -55,17 +55,17 @@ const ServicesCard = () => {
             <button
               key={index}
               onClick={() => setExpandedIndex(isExpanded ? null : index)}
-              className="flex items-start gap-3 p-4 rounded-xl border border-border hover:border-primary/30 hover:bg-secondary/50 transition-all text-left card-hover"
+              className="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-primary/30 hover:bg-gray-50 transition-all text-left"
             >
-              <div className={`w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0 ${service.color}`}>
-                <Icon className="w-5 h-5" />
+              <div className={`w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0`}>
+                <Icon className={`w-5 h-5 ${service.color}`} />
               </div>
               <div className="flex-1">
-                <span className="font-medium text-foreground block">
+                <span className="text-sm font-medium text-gray-700">
                   {service.title}
                 </span>
                 {isExpanded && (
-                  <p className="text-sm text-muted-foreground mt-2 animate-fade-in">
+                  <p className="text-sm text-gray-500 mt-2 animate-fade-in">
                     {service.description}
                   </p>
                 )}
