@@ -4,10 +4,10 @@ import { company } from "@/config/company";
 const Footer = () => {
   return (
     <footer 
-      className="text-white py-8 mt-12"
+      className="w-full text-white py-8 mt-12"
       style={{ backgroundColor: '#243782' }}
     >
-      <div className="container mx-auto px-4 text-center">
+      <div className="max-w-4xl mx-auto px-4 text-center">
         <div className="mb-4">
           <h3 className="text-lg font-semibold mb-4">Portal do Cliente</h3>
           <div className="flex justify-center space-x-6 text-sm text-slate-200 mb-4">
