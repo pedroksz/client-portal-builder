@@ -20,7 +20,7 @@ const SobreNos = () => {
             <h1 className="text-2xl font-bold text-foreground mb-6">Sobre Nós</h1>
 
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Quem Somos</h3>
+              <h3 className="text-lg font-semibold text-primary mb-3">Quem Somos</h3>
               <p className="text-muted-foreground">
                 A {company.name} é uma empresa especializada em {company.activity}, dedicada a auxiliar empresas e profissionais a alcançarem excelência 
                 operacional e financeira.
@@ -30,7 +30,7 @@ const SobreNos = () => {
             <div className="grid gap-4 md:grid-cols-3">
               <div className="flex flex-col items-center text-center p-4 rounded-lg bg-muted/50">
                 <Building2 className="w-10 h-10 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Quem Somos</h3>
+                <h3 className="font-semibold text-primary mb-2">Quem Somos</h3>
                 <p className="text-sm text-muted-foreground">
                   Empresa especializada em {company.activity}
                 </p>
@@ -38,7 +38,7 @@ const SobreNos = () => {
 
               <div className="flex flex-col items-center text-center p-4 rounded-lg bg-muted/50">
                 <Target className="w-10 h-10 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Nossa Missão</h3>
+                <h3 className="font-semibold text-primary mb-2">Nossa Missão</h3>
                 <p className="text-sm text-muted-foreground">
                   Transformar desafios em oportunidades de crescimento
                 </p>
@@ -46,7 +46,7 @@ const SobreNos = () => {
 
               <div className="flex flex-col items-center text-center p-4 rounded-lg bg-muted/50">
                 <Heart className="w-10 h-10 text-primary mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Nossos Valores</h3>
+                <h3 className="font-semibold text-primary mb-2">Nossos Valores</h3>
                 <p className="text-sm text-muted-foreground">
                   Ética, transparência e compromisso
                 </p>
@@ -54,7 +54,7 @@ const SobreNos = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Nossa Missão</h3>
+              <h3 className="text-lg font-semibold text-primary mb-3">Nossa Missão</h3>
               <p className="text-muted-foreground">
                 Oferecer soluções personalizadas de {company.activity} que transformem desafios 
                 em oportunidades de crescimento sustentável, sempre com foco em resultados práticos 
@@ -63,7 +63,7 @@ const SobreNos = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Nossos Valores</h3>
+              <h3 className="text-lg font-semibold text-primary mb-3">Nossos Valores</h3>
               <ul className="list-disc list-inside text-muted-foreground space-y-2">
                 <li>Excelência em atendimento e qualidade dos serviços</li>
                 <li>Ética e transparência em todas as relações</li>
@@ -74,7 +74,7 @@ const SobreNos = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">Áreas de Atuação</h3>
+              <h3 className="text-lg font-semibold text-primary mb-3">Áreas de Atuação</h3>
               <p className="text-muted-foreground mb-2">
                 Trabalhamos com diversos segmentos empresariais, oferecendo consultoria especializada em:
               </p>
