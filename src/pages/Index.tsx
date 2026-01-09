@@ -7,15 +7,17 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
-      <div className="max-w-3xl mx-auto space-y-6">
-        <AlertBanner />
-        <WhatsAppCard />
-        <ServicesCard />
-        <StepsCard />
-        <BenefitsCard />
-        <Footer />
+    <div className="min-h-screen bg-background flex flex-col">
+      <div className="flex-1 py-8 px-4">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <AlertBanner />
+          <WhatsAppCard />
+          <ServicesCard />
+          <StepsCard />
+          <BenefitsCard />
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };
