@@ -20,40 +20,83 @@ const PoliticaPrivacidade = () => {
             <CardTitle className="text-2xl text-primary">Política de Privacidade</CardTitle>
           </CardHeader>
           <CardContent className="prose prose-sm max-w-none text-muted-foreground space-y-4">
+            <h3 className="text-foreground font-semibold mt-2">1. Informações Gerais</h3>
             <p>
-              A sua privacidade é importante para nós. É política do Portal do Cliente respeitar a sua 
-              privacidade em relação a qualquer informação sua que possamos coletar no site.
-            </p>
-            
-            <h3 className="text-foreground font-semibold mt-6">1. Informações que coletamos</h3>
-            <p>
-              Coletamos informações pessoais que você nos fornece diretamente, como nome, 
-              e-mail, telefone e dados de contato quando você utiliza nossos serviços.
+              A FAROLDIGITAL GEOTECNOLOGIA LTDA, inscrita no CNPJ 97.551.525/0001-57, está comprometida 
+              com a proteção dos dados pessoais de seus clientes, em conformidade com a Lei Geral de 
+              Proteção de Dados (LGPD - Lei nº 13.709/2018).
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">2. Como usamos suas informações</h3>
+            <h3 className="text-foreground font-semibold mt-6">2. Dados Coletados</h3>
+            <p>Coletamos os seguintes tipos de dados:</p>
+            <ul className="list-disc list-inside space-y-1">
+              <li>Dados de identificação: nome completo, CPF/CNPJ, RG, data de nascimento</li>
+              <li>Dados de contato: e-mail, telefone, endereço</li>
+              <li>Dados financeiros: informações bancárias, histórico de pagamentos</li>
+              <li>Dados de navegação: endereço IP, cookies, logs de acesso</li>
+            </ul>
+
+            <h3 className="text-foreground font-semibold mt-6">3. Finalidade do Tratamento</h3>
+            <p>Os dados coletados são utilizados para:</p>
+            <ul className="list-disc list-inside space-y-1">
+              <li>Prestação de serviços de consultoria e gestão empresarial</li>
+              <li>Processamento de pagamentos e emissão de boletos</li>
+              <li>Comunicação com clientes sobre serviços contratados</li>
+              <li>Cumprimento de obrigações legais e regulatórias</li>
+              <li>Melhoria contínua de nossos serviços</li>
+            </ul>
+
+            <h3 className="text-foreground font-semibold mt-6">4. Compartilhamento de Dados</h3>
             <p>
-              Utilizamos as informações coletadas para fornecer, manter e melhorar nossos serviços, 
-              processar transações e enviar comunicações relacionadas.
+              Não compartilhamos seus dados pessoais com terceiros, exceto quando necessário para a 
+              execução dos serviços contratados, cumprimento de obrigações legais ou mediante seu 
+              consentimento expresso. Parceiros que processam dados em nosso nome são contratualmente 
+              obrigados a mantê-los seguros e confidenciais.
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">3. Compartilhamento de informações</h3>
+            <h3 className="text-foreground font-semibold mt-6">5. Segurança dos Dados</h3>
             <p>
-              Não compartilhamos suas informações pessoais com terceiros, exceto quando 
-              necessário para cumprir obrigações legais ou proteger nossos direitos.
+              Implementamos medidas técnicas e organizacionais adequadas para proteger seus dados 
+              contra acesso não autorizado, perda, destruição ou alteração. Utilizamos criptografia, 
+              controles de acesso e monitoramento contínuo de nossos sistemas.
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">4. Segurança</h3>
+            <h3 className="text-foreground font-semibold mt-6">6. Seus Direitos</h3>
+            <p>Conforme a LGPD, você tem direito a:</p>
+            <ul className="list-disc list-inside space-y-1">
+              <li>Confirmar a existência de tratamento de seus dados</li>
+              <li>Acessar seus dados pessoais</li>
+              <li>Corrigir dados incompletos, inexatos ou desatualizados</li>
+              <li>Solicitar a anonimização, bloqueio ou eliminação de dados desnecessários</li>
+              <li>Solicitar a portabilidade de dados a outro fornecedor</li>
+              <li>Revogar o consentimento</li>
+            </ul>
+
+            <h3 className="text-foreground font-semibold mt-6">7. Retenção de Dados</h3>
             <p>
-              Implementamos medidas de segurança adequadas para proteger suas informações 
-              pessoais contra acesso não autorizado, alteração, divulgação ou destruição.
+              Mantemos seus dados pelo período necessário para cumprimento das finalidades descritas 
+              nesta política, respeitando os prazos legais de retenção aplicáveis.
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">5. Contato</h3>
+            <h3 className="text-foreground font-semibold mt-6">8. Cookies</h3>
             <p>
-              Se você tiver dúvidas sobre nossa política de privacidade, entre em contato 
-              conosco através do WhatsApp disponível em nossa página principal.
+              Utilizamos cookies para melhorar a experiência de navegação em nosso site. Você pode 
+              gerenciar suas preferências de cookies através das configurações do seu navegador.
             </p>
+
+            <h3 className="text-foreground font-semibold mt-6">9. Alterações na Política</h3>
+            <p>
+              Esta política pode ser atualizada periodicamente. Recomendamos que você a revise 
+              regularmente. A data da última atualização estará sempre indicada no final deste documento.
+            </p>
+
+            <h3 className="text-foreground font-semibold mt-6">10. Contato</h3>
+            <p>
+              Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato 
+              conosco através do e-mail contato@faroldigital.com.br.
+            </p>
+
+            <p className="text-sm italic mt-8">Última atualização: Janeiro de 2025</p>
           </CardContent>
         </Card>
 

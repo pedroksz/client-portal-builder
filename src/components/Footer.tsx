@@ -29,13 +29,13 @@ const Footer = () => {
         {/* Company Info */}
         <div className="text-center space-y-2">
           <p className="text-sm font-medium text-foreground">
-            Portal do Cliente
+            FAROLDIGITAL GEOTECNOLOGIA LTDA
           </p>
           <p className="text-xs text-muted-foreground">
-            CNPJ: 00.000.000/0001-00
+            CNPJ: 97.551.525/0001-57
           </p>
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Portal do Cliente. Todos os direitos reservados.
+            © {new Date().getFullYear()} FAROLDIGITAL GEOTECNOLOGIA LTDA. Todos os direitos reservados.
           </p>
         </div>
       </div>
