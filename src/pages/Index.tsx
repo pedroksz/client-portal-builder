@@ -3,6 +3,7 @@ import WhatsAppCard from "@/components/WhatsAppCard";
 import ServicesCard from "@/components/ServicesCard";
 import StepsCard from "@/components/StepsCard";
 import BenefitsCard from "@/components/BenefitsCard";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -13,10 +14,7 @@ const Index = () => {
         <ServicesCard />
         <StepsCard />
         <BenefitsCard />
-        
-        <footer className="text-center text-sm text-muted-foreground pt-8 pb-4">
-          <p>© {new Date().getFullYear()} Portal do Cliente. Todos os direitos reservados.</p>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
