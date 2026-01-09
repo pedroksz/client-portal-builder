@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
+import { company } from "@/config/company";
 
 const TermosUso = () => {
   return (
@@ -22,13 +23,13 @@ const TermosUso = () => {
           <CardContent className="prose prose-sm max-w-none text-muted-foreground space-y-4">
             <h3 className="text-foreground font-semibold mt-2">1. Aceitação dos Termos</h3>
             <p>
-              Ao acessar e utilizar os serviços da FAROLDIGITAL GEOTECNOLOGIA LTDA, inscrita no 
-              CNPJ 97.551.525/0001-57, você concorda em cumprir e estar vinculado aos seguintes 
+              Ao acessar e utilizar os serviços da {company.name}, inscrita no 
+              CNPJ {company.cnpj}, você concorda em cumprir e estar vinculado aos seguintes 
               termos e condições de uso.
             </p>
 
             <h3 className="text-foreground font-semibold mt-6">2. Serviços Oferecidos</h3>
-            <p>A FAROLDIGITAL GEOTECNOLOGIA LTDA oferece serviços de consultoria e gestão empresarial, incluindo:</p>
+            <p>A {company.name} oferece serviços de {company.activity}, incluindo:</p>
             <ul className="list-disc list-inside space-y-1">
               <li>Consultoria em planejamento estratégico</li>
               <li>Gestão de processos operacionais</li>
@@ -68,8 +69,7 @@ const TermosUso = () => {
 
             <h3 className="text-foreground font-semibold mt-6">6. Propriedade Intelectual</h3>
             <p>
-              Todos os materiais, conteúdos, metodologias e ferramentas fornecidos pela FAROLDIGITAL 
-              GEOTECNOLOGIA LTDA são protegidos por direitos autorais e propriedade intelectual. 
+              Todos os materiais, conteúdos, metodologias e ferramentas fornecidos pela {company.name} são protegidos por direitos autorais e propriedade intelectual. 
               É proibida a reprodução, distribuição ou uso comercial sem autorização prévia por escrito.
             </p>
 
@@ -82,7 +82,7 @@ const TermosUso = () => {
 
             <h3 className="text-foreground font-semibold mt-6">8. Limitação de Responsabilidade</h3>
             <p>
-              A FAROLDIGITAL GEOTECNOLOGIA LTDA se esforça para fornecer serviços de alta qualidade, 
+              A {company.name} se esforça para fornecer serviços de alta qualidade, 
               porém não garante resultados específicos. Não nos responsabilizamos por perdas indiretas, 
               lucros cessantes ou danos consequentes decorrentes do uso de nossos serviços, exceto nos 
               casos previstos em lei.
@@ -110,8 +110,7 @@ const TermosUso = () => {
 
             <h3 className="text-foreground font-semibold mt-6">12. Contato</h3>
             <p>
-              Para dúvidas, esclarecimentos ou suporte, entre em contato através do e-mail 
-              contato@faroldigital.com.br.
+              Para dúvidas, esclarecimentos ou suporte, entre em contato através do e-mail {company.email}.
             </p>
 
             <p className="text-sm italic mt-8">Última atualização: Janeiro de 2025</p>

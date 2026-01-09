@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { company } from "@/config/company";
 
 const Footer = () => {
   return (
@@ -33,7 +34,7 @@ const Footer = () => {
 
         <div className="mb-4 text-xs text-slate-300 max-w-3xl mx-auto">
           <p>
-            <strong>Importante:</strong> A FAROLDIGITAL GEOTECNOLOGIA LTDA é uma empresa de consultoria em gestão empresarial. Não somos instituição financeira e não intermediamos operações de crédito. Nossos serviços são de orientação e consultoria.
+            <strong>Importante:</strong> A {company.name} é uma empresa de {company.activity}. Não somos instituição financeira e não intermediamos operações de crédito. Nossos serviços são de orientação e consultoria.
           </p>
         </div>
 
@@ -45,7 +46,7 @@ const Footer = () => {
             className="text-xs"
             style={{ color: 'rgba(255, 255, 255, 0.15)' }}
           >
-            © {new Date().getFullYear()} FAROLDIGITAL GEOTECNOLOGIA LTDA - 97.551.525/0001-57. Todos os direitos reservados.
+            © {new Date().getFullYear()} {company.name} - {company.cnpj}. Todos os direitos reservados.
           </p>
         </div>
       </div>

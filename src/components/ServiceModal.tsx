@@ -1,6 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, LucideIcon } from "lucide-react";
+import { company, whatsappLink } from "@/config/company";
 
 interface ServiceModalProps {
   isOpen: boolean;
@@ -13,9 +14,6 @@ interface ServiceModalProps {
 }
 
 const ServiceModal = ({ isOpen, onClose, service }: ServiceModalProps) => {
-  const whatsappNumber = "5511948637288";
-  const whatsappLink = `https://wa.me/${whatsappNumber}`;
-
   if (!service) return null;
 
   const Icon = service.icon;
@@ -54,7 +52,7 @@ const ServiceModal = ({ isOpen, onClose, service }: ServiceModalProps) => {
             </div>
             <div className="text-gray-700 space-y-2 text-sm">
               <p><span className="inline-block mr-1">•</span>O Portal do Cliente está em atualização e temporariamente fora do ar.</p>
-              <p><span className="inline-block mr-1">•</span>A {service.title} está sendo realizada exclusivamente pelo nosso WhatsApp Oficial: (11) 4863-7288.</p>
+              <p><span className="inline-block mr-1">•</span>A {service.title} está sendo realizada exclusivamente pelo nosso WhatsApp Oficial: {company.phoneFormatted}.</p>
               <p><span className="inline-block mr-1">•</span>Adicione aos contatos e envie uma mensagem ou clique no botão abaixo.</p>
             </div>
           </div>
