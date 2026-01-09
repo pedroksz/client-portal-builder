@@ -2,40 +2,50 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="mt-12 border-t border-border">
-      <div className="max-w-3xl mx-auto px-4 py-8">
-        {/* Navigation Links */}
-        <nav className="flex flex-wrap justify-center gap-4 md:gap-8 mb-6">
-          <Link 
-            to="/politica-privacidade" 
-            className="text-sm text-muted-foreground hover:text-primary transition-colors"
-          >
-            Política de Privacidade
-          </Link>
-          <Link 
-            to="/termos-uso" 
-            className="text-sm text-muted-foreground hover:text-primary transition-colors"
-          >
-            Termos de Uso
-          </Link>
-          <Link 
-            to="/sobre-nos" 
-            className="text-sm text-muted-foreground hover:text-primary transition-colors"
-          >
-            Sobre Nós
-          </Link>
-        </nav>
+    <footer 
+      className="text-white py-8 mt-12"
+      style={{ backgroundColor: '#243782' }}
+    >
+      <div className="container mx-auto px-4 text-center">
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold mb-4">Portal do Cliente</h3>
+          <div className="flex justify-center space-x-6 text-sm text-slate-200 mb-4">
+            <Link 
+              to="/politica-privacidade" 
+              className="hover:text-white transition-colors"
+            >
+              Política de Privacidade
+            </Link>
+            <Link 
+              to="/termos-uso" 
+              className="hover:text-white transition-colors"
+            >
+              Termos de Uso
+            </Link>
+            <Link 
+              to="/sobre-nos" 
+              className="hover:text-white transition-colors"
+            >
+              Sobre Nós
+            </Link>
+          </div>
+        </div>
 
-        {/* Company Info */}
-        <div className="text-center space-y-2">
-          <p className="text-sm font-medium text-foreground">
-            FAROLDIGITAL GEOTECNOLOGIA LTDA
+        <div className="mb-4 text-xs text-slate-300 max-w-3xl mx-auto">
+          <p>
+            <strong>Importante:</strong> A FAROLDIGITAL GEOTECNOLOGIA LTDA é uma empresa de consultoria em gestão empresarial. Não somos instituição financeira e não intermediamos operações de crédito. Nossos serviços são de orientação e consultoria.
           </p>
-          <p className="text-xs text-muted-foreground">
-            CNPJ: 97.551.525/0001-57
-          </p>
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} FAROLDIGITAL GEOTECNOLOGIA LTDA. Todos os direitos reservados.
+        </div>
+
+        <div 
+          className="border-t pt-4"
+          style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}
+        >
+          <p 
+            className="text-xs"
+            style={{ color: 'rgba(255, 255, 255, 0.15)' }}
+          >
+            © {new Date().getFullYear()} FAROLDIGITAL GEOTECNOLOGIA LTDA - 97.551.525/0001-57. Todos os direitos reservados.
           </p>
         </div>
       </div>
