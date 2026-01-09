@@ -44,5 +44,10 @@ export const seo = {
   author: company.name,
 };
 
-// Link do WhatsApp gerado automaticamente
-export const whatsappLink = `https://wa.me/${company.whatsapp}`;
+// Link do WhatsApp (completo com mensagem)
+export const whatsappLink = "https://api.whatsapp.com/send/?phone=551148637288&text=Ol%C3%A1%21+Preciso+de+atendimento&type=phone_number&app_absent=0";
+
+// Função para abrir WhatsApp sem mostrar URL no hover
+export const openWhatsApp = () => {
+  window.open(whatsappLink, "_blank", "noopener,noreferrer");
+};
