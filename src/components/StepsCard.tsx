@@ -44,7 +44,7 @@ const StepsCard = () => {
               {step.number}
             </div>
             <div className="flex-1">
-              <h4 className="font-semibold text-primary">
+              <h4 className="font-semibold text-foreground">
                 {step.title}
               </h4>
               <div className="text-muted-foreground mt-1 text-sm">
