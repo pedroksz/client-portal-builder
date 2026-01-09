@@ -61,7 +61,7 @@ const ServicesCard = () => {
                 <Icon className={`w-5 h-5 ${service.color}`} />
               </div>
               <div className="flex-1">
-                <span className="text-sm font-medium text-gray-700">
+                <span className="font-medium text-gray-700">
                   {service.title}
                 </span>
                 {isExpanded && (
