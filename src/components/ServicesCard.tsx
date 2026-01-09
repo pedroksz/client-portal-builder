@@ -42,20 +42,25 @@ const ServicesCard = () => {
   return (
     <>
       <div 
-        className="bg-card rounded-xl p-6 shadow-sm animate-fade-in"
+        className="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm mb-8 animate-fade-in"
         style={{ animationDelay: "0.2s" }}
       >
-        <div className="flex items-center gap-2 mb-2">
-          <CheckCircle className="w-5 h-5 text-accent" />
-          <h3 className="text-base font-semibold text-primary">
-            Solicitações Disponíveis
-          </h3>
+        <div className="px-6">
+          <div className="flex items-center gap-2 mb-1">
+            <CheckCircle className="w-5 h-5 text-accent" />
+            <h3 
+              className="font-semibold"
+              style={{ color: 'rgb(36, 55, 130)' }}
+            >
+              Solicitações Disponíveis
+            </h3>
+          </div>
+          <p className="text-sm text-gray-500">
+            Clique no serviço desejado para mais informações
+          </p>
         </div>
-        <p className="text-sm text-gray-500 mb-4">
-          Clique no serviço desejado para mais informações
-        </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 px-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             
@@ -65,11 +70,20 @@ const ServicesCard = () => {
                 onClick={() => setSelectedService(service)}
                 className="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-primary/30 hover:bg-gray-50 transition-all text-left"
               >
-                <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
-                  <Icon className={`w-5 h-5 ${service.color}`} />
+                <div 
+                  className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ backgroundColor: 'rgb(239, 246, 255)' }}
+                >
+                  <Icon 
+                    className="w-5 h-5"
+                    style={{ color: 'rgb(36, 55, 130)' }}
+                  />
                 </div>
                 <div className="flex-1">
-                  <span className="text-primary font-semibold">
+                  <span 
+                    className="font-medium"
+                    style={{ color: 'rgb(36, 55, 130)' }}
+                  >
                     {service.title}
                   </span>
                 </div>
