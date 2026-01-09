@@ -47,15 +47,12 @@ const ServicesCard = () => {
       >
         <div className="px-6">
           <div className="flex items-center gap-2 mb-1">
-            <CheckCircle className="w-5 h-5 text-accent" />
-            <h3 
-              className="font-semibold"
-              style={{ color: 'rgb(36, 55, 130)' }}
-            >
+            <CheckCircle className="w-5 h-5 text-primary" />
+            <h3 className="font-semibold text-primary">
               Solicitações Disponíveis
             </h3>
           </div>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-muted-foreground">
             Clique no serviço desejado para mais informações
           </p>
         </div>
@@ -68,22 +65,13 @@ const ServicesCard = () => {
               <button
                 key={index}
                 onClick={() => setSelectedService(service)}
-                className="flex items-center gap-3 p-4 rounded-lg border border-gray-200 hover:border-primary/30 hover:bg-gray-50 transition-all text-left"
+                className="flex items-center gap-3 p-4 rounded-lg border border-border hover:border-primary/30 hover:bg-secondary transition-all text-left"
               >
-                <div 
-                  className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ backgroundColor: 'rgb(239, 246, 255)' }}
-                >
-                  <Icon 
-                    className="w-5 h-5"
-                    style={{ color: 'rgb(36, 55, 130)' }}
-                  />
+                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <span 
-                    className="font-medium"
-                    style={{ color: 'rgb(36, 55, 130)' }}
-                  >
+                  <span className="font-medium text-primary">
                     {service.title}
                   </span>
                 </div>

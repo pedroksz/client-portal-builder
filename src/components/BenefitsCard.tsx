@@ -35,12 +35,12 @@ const BenefitsCard = () => {
           return (
             <div
               key={index}
-              className="bg-card rounded-xl p-6 text-center card-shadow card-hover"
+              className="bg-card rounded-xl p-6 text-center card-shadow card-hover border border-border"
             >
               <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mx-auto mb-3">
-                <Icon className="w-6 h-6 text-primary" />
+                <Icon className="w-6 h-6 text-accent" />
               </div>
-              <h4 className="font-semibold text-foreground mb-1">
+              <h4 className="font-semibold text-primary mb-1">
                 {benefit.title}
               </h4>
               <p className="text-sm text-muted-foreground">
