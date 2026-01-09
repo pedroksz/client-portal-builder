@@ -1,26 +1,24 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import { company } from "@/config/company";
 
 const PoliticaPrivacidade = () => {
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
-      <div className="max-w-3xl mx-auto">
-        <Link to="/">
-          <Button variant="ghost" className="mb-6">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Voltar
-          </Button>
-        </Link>
+    <div className="min-h-screen bg-background flex flex-col">
+      <div className="flex-1 py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <Link to="/">
+            <Button variant="ghost" className="mb-6">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Voltar
+            </Button>
+          </Link>
 
-        <Card className="card-shadow">
-          <CardHeader>
-            <CardTitle className="text-2xl text-primary">Política de Privacidade</CardTitle>
-          </CardHeader>
-          <CardContent className="prose prose-sm max-w-none text-muted-foreground space-y-4">
+          <div className="prose prose-sm max-w-none text-muted-foreground space-y-4">
+            <h1 className="text-2xl font-bold text-foreground mb-6">Política de Privacidade</h1>
+            
             <h3 className="text-foreground font-semibold mt-2">1. Informações Gerais</h3>
             <p>
               A {company.name}, inscrita no CNPJ {company.cnpj}, está comprometida 
@@ -98,11 +96,11 @@ const PoliticaPrivacidade = () => {
             </p>
 
             <p className="text-sm italic mt-8">Última atualização: Janeiro de 2025</p>
-          </CardContent>
-        </Card>
-
-        <Footer />
+          </div>
+        </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

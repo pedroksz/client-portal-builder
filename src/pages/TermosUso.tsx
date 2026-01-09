@@ -1,26 +1,24 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import { company } from "@/config/company";
 
 const TermosUso = () => {
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
-      <div className="max-w-3xl mx-auto">
-        <Link to="/">
-          <Button variant="ghost" className="mb-6">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Voltar
-          </Button>
-        </Link>
+    <div className="min-h-screen bg-background flex flex-col">
+      <div className="flex-1 py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <Link to="/">
+            <Button variant="ghost" className="mb-6">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Voltar
+            </Button>
+          </Link>
 
-        <Card className="card-shadow">
-          <CardHeader>
-            <CardTitle className="text-2xl text-primary">Termos de Uso</CardTitle>
-          </CardHeader>
-          <CardContent className="prose prose-sm max-w-none text-muted-foreground space-y-4">
+          <div className="prose prose-sm max-w-none text-muted-foreground space-y-4">
+            <h1 className="text-2xl font-bold text-foreground mb-6">Termos de Uso</h1>
+            
             <h3 className="text-foreground font-semibold mt-2">1. Aceitação dos Termos</h3>
             <p>
               Ao acessar e utilizar os serviços da {company.name}, inscrita no 
@@ -56,7 +54,7 @@ const TermosUso = () => {
               <li>Utilizar os serviços apenas para fins lícitos e legítimos</li>
               <li>Não interferir ou interromper o funcionamento dos serviços</li>
               <li>Cumprir todas as leis e regulamentos aplicáveis</li>
-              <li>Respeitar os direitos de propriedade intelectual</li>
+              <li>Respeito os direitos de propriedade intelectual</li>
             </ul>
 
             <h3 className="text-foreground font-semibold mt-6">5. Pagamentos e Cobrança</h3>
@@ -114,11 +112,11 @@ const TermosUso = () => {
             </p>
 
             <p className="text-sm italic mt-8">Última atualização: Janeiro de 2025</p>
-          </CardContent>
-        </Card>
-
-        <Footer />
+          </div>
+        </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

@@ -1,26 +1,24 @@
 import { ArrowLeft, Building2, Target, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import { company } from "@/config/company";
 
 const SobreNos = () => {
   return (
-    <div className="min-h-screen bg-background py-8 px-4">
-      <div className="max-w-3xl mx-auto">
-        <Link to="/">
-          <Button variant="ghost" className="mb-6">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Voltar
-          </Button>
-        </Link>
+    <div className="min-h-screen bg-background flex flex-col">
+      <div className="flex-1 py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <Link to="/">
+            <Button variant="ghost" className="mb-6">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Voltar
+            </Button>
+          </Link>
 
-        <Card className="card-shadow">
-          <CardHeader>
-            <CardTitle className="text-2xl text-primary">Sobre Nós</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          <div className="space-y-6">
+            <h1 className="text-2xl font-bold text-foreground mb-6">Sobre Nós</h1>
+
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-3">Quem Somos</h3>
               <p className="text-muted-foreground">
@@ -96,11 +94,11 @@ const SobreNos = () => {
                 CNPJ: {company.cnpj}
               </p>
             </div>
-          </CardContent>
-        </Card>
-
-        <Footer />
+          </div>
+        </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
