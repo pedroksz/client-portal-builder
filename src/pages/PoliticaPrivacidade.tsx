@@ -19,14 +19,14 @@ const PoliticaPrivacidade = () => {
           <div className="prose prose-sm max-w-none text-muted-foreground space-y-4">
             <h1 className="text-2xl font-bold text-foreground mb-6">Política de Privacidade</h1>
             
-            <h3 className="text-foreground font-semibold mt-2">1. Informações Gerais</h3>
+            <h3 className="text-primary font-semibold mt-2">1. Informações Gerais</h3>
             <p>
               A {company.name}, inscrita no CNPJ {company.cnpj}, está comprometida 
               com a proteção dos dados pessoais de seus clientes, em conformidade com a Lei Geral de 
               Proteção de Dados (LGPD - Lei nº 13.709/2018).
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">2. Dados Coletados</h3>
+            <h3 className="text-primary font-semibold mt-6">2. Dados Coletados</h3>
             <p>Coletamos os seguintes tipos de dados:</p>
             <ul className="list-disc list-inside space-y-1">
               <li>Dados de identificação: nome completo, CPF/CNPJ, RG, data de nascimento</li>
@@ -35,7 +35,7 @@ const PoliticaPrivacidade = () => {
               <li>Dados de navegação: endereço IP, cookies, logs de acesso</li>
             </ul>
 
-            <h3 className="text-foreground font-semibold mt-6">3. Finalidade do Tratamento</h3>
+            <h3 className="text-primary font-semibold mt-6">3. Finalidade do Tratamento</h3>
             <p>Os dados coletados são utilizados para:</p>
             <ul className="list-disc list-inside space-y-1">
               <li>Prestação de serviços de {company.activity}</li>
@@ -45,7 +45,7 @@ const PoliticaPrivacidade = () => {
               <li>Melhoria contínua de nossos serviços</li>
             </ul>
 
-            <h3 className="text-foreground font-semibold mt-6">4. Compartilhamento de Dados</h3>
+            <h3 className="text-primary font-semibold mt-6">4. Compartilhamento de Dados</h3>
             <p>
               Não compartilhamos seus dados pessoais com terceiros, exceto quando necessário para a 
               execução dos serviços contratados, cumprimento de obrigações legais ou mediante seu 
@@ -53,14 +53,14 @@ const PoliticaPrivacidade = () => {
               obrigados a mantê-los seguros e confidenciais.
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">5. Segurança dos Dados</h3>
+            <h3 className="text-primary font-semibold mt-6">5. Segurança dos Dados</h3>
             <p>
               Implementamos medidas técnicas e organizacionais adequadas para proteger seus dados 
               contra acesso não autorizado, perda, destruição ou alteração. Utilizamos criptografia, 
               controles de acesso e monitoramento contínuo de nossos sistemas.
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">6. Seus Direitos</h3>
+            <h3 className="text-primary font-semibold mt-6">6. Seus Direitos</h3>
             <p>Conforme a LGPD, você tem direito a:</p>
             <ul className="list-disc list-inside space-y-1">
               <li>Confirmar a existência de tratamento de seus dados</li>
@@ -71,25 +71,25 @@ const PoliticaPrivacidade = () => {
               <li>Revogar o consentimento</li>
             </ul>
 
-            <h3 className="text-foreground font-semibold mt-6">7. Retenção de Dados</h3>
+            <h3 className="text-primary font-semibold mt-6">7. Retenção de Dados</h3>
             <p>
               Mantemos seus dados pelo período necessário para cumprimento das finalidades descritas 
               nesta política, respeitando os prazos legais de retenção aplicáveis.
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">8. Cookies</h3>
+            <h3 className="text-primary font-semibold mt-6">8. Cookies</h3>
             <p>
               Utilizamos cookies para melhorar a experiência de navegação em nosso site. Você pode 
               gerenciar suas preferências de cookies através das configurações do seu navegador.
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">9. Alterações na Política</h3>
+            <h3 className="text-primary font-semibold mt-6">9. Alterações na Política</h3>
             <p>
               Esta política pode ser atualizada periodicamente. Recomendamos que você a revise 
               regularmente. A data da última atualização estará sempre indicada no final deste documento.
             </p>
 
-            <h3 className="text-foreground font-semibold mt-6">10. Contato</h3>
+            <h3 className="text-primary font-semibold mt-6">10. Contato</h3>
             <p>
               Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato 
               conosco através do e-mail {company.email}.
