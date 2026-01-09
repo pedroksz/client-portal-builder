@@ -29,5 +29,20 @@ export const company = {
   serviceHours: "8h às 20h",
 };
 
+// ===========================================
+// CONFIGURAÇÃO DE SEO
+// ===========================================
+
+export const seo = {
+  // Título da página (aparece na aba do navegador)
+  title: "Portal do Cliente",
+  
+  // Descrição para mecanismos de busca
+  description: `${company.name} - Portal do Cliente para atendimento via WhatsApp`,
+  
+  // Autor do site
+  author: company.name,
+};
+
 // Link do WhatsApp gerado automaticamente
 export const whatsappLink = `https://wa.me/${company.whatsapp}`;
