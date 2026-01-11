@@ -1,4 +1,5 @@
 import { CircleAlert } from "lucide-react";
+import { company } from "@/config/company";
 
 const AlertBanner = () => {
   return (
@@ -11,7 +12,7 @@ const AlertBanner = () => {
         </div>
         <div className="flex-1">
           <h3 className="text-primary font-bold text-lg mb-2">
-            Portal do Cliente - Fora do Ar
+            {company.alertTitle}
           </h3>
           <div className="text-gray-700 space-y-2 text-sm">
             <p>O Portal do Cliente está passando por uma atualização e, por isso, está fora do ar.</p>
