@@ -27,6 +27,9 @@ export const company = {
   
   // Horário de atendimento
   serviceHours: "8h às 20h",
+  
+  // Título do banner de alerta
+  alertTitle: "Portal do Cliente - Fora do Ar",
 };
 
 // ===========================================
